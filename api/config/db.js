@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const connectDB = async () => {
   try {
-    await mongoose.connect('mongodb://localhost:27017/desa');
+    await mongoose.connect(process.env.MONGO_URI); // Gunakan variabel dari .env
     console.log("Database connected!");
   } catch (error) {
     console.error("Database connection error:", error);

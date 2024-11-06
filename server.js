@@ -1,7 +1,9 @@
+// server.js
+require('dotenv').config(); // Load .env file
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
-const connectDB = require(path.join(__dirname, 'api','config', 'db')); // Menggunakan path absolut
+const connectDB = require(path.join(__dirname, 'api','config', 'db'));
 const userRoutes = require('./api/routes/userRoutes');
 
 const app = express();

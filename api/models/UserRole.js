@@ -1,4 +1,4 @@
-// models/UserRole.js
+// api/models/UserRole.js
 const mongoose = require('mongoose');
 
 const userRoleSchema = new mongoose.Schema({
@@ -6,13 +6,13 @@ const userRoleSchema = new mongoose.Schema({
     type: String,
     required: true,
     unique: true,
-    trim: true // Menghapus spasi di awal dan akhir
+    trim: true
   },
   description: {
     type: String,
-    trim: true // Menghapus spasi di awal dan akhir
+    trim: true
   }
-}, { timestamps: true }); // Menambahkan createdAt dan updatedAt
+}, { timestamps: true });
 
 const UserRole = mongoose.model('UserRole', userRoleSchema);
 module.exports = UserRole;
